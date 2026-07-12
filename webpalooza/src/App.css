@@ -24,7 +24,7 @@
   align-items: center;
   flex-direction: column;
   font-family: 'Arial', sans-serif;
-  font-size: 3rem;
+  font-size: 7vmin;
   font-weight: 700;
   color: #000000;
 }
@@ -40,11 +40,18 @@ p{
 }
 
 .loading-text {
-  margin-top: 14px;
   font-size: 1.4rem;
   font-weight: 600;
   opacity: 0;
-  animation: loadingFade 700ms ease-out forwards;
+  animation: loadingFade 900ms ease-out forwards;
+}
+
+.loading-slot {
+  margin-top: 14px;
+  min-height: 36px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 

@@ -19,8 +19,8 @@ function App() {
       setShowLoadingText(true);
       phraseTimer = setInterval(() => {
         setPhraseIndex((prev) => (prev + 1) % loadingPhrases.length);
-      }, 1700);
-    }, 1200);
+      }, 2600);
+    }, 2200);
 
     return () => {
       clearTimeout(startTimer);
@@ -35,9 +35,11 @@ function App() {
     <div className="logo-title">
       <img className="logo" src={Logo} alt="logo" />
       <p className="title-text">WISH LIST</p>
-      {showLoadingText && (
-        <p key={phraseIndex} className="loading-text">{loadingPhrases[phraseIndex]}</p>
-      )}
+      <div className="loading-slot">
+        {showLoadingText && (
+          <p key={phraseIndex} className="loading-text">{loadingPhrases[phraseIndex]}</p>
+        )}
+      </div>
       
     </div>
     </header>
