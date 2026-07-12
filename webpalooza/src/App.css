@@ -1,0 +1,72 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #B8FF2C;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  height: 20vmin;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 900ms ease-out forwards;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+p{
+  margin: 0;
+}
+
+.logo-title .title-text {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 900ms ease-out 250ms forwards;
+}
+
+.loading-text {
+  margin-top: 14px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  opacity: 0;
+  animation: loadingFade 700ms ease-out forwards;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loadingFade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
