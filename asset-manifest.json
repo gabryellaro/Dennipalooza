@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Dennipalooza/static/css/main.3c2ed65b.css",
-    "main.js": "/Dennipalooza/static/js/main.79c917cb.js",
+    "main.css": "/Dennipalooza/static/css/main.057b907e.css",
+    "main.js": "/Dennipalooza/static/js/main.f981eee7.js",
     "static/media/logo.png": "/Dennipalooza/static/media/logo.c505af79661df5eb2b98.png",
     "index.html": "/Dennipalooza/index.html",
-    "main.3c2ed65b.css.map": "/Dennipalooza/static/css/main.3c2ed65b.css.map",
-    "main.79c917cb.js.map": "/Dennipalooza/static/js/main.79c917cb.js.map"
+    "main.057b907e.css.map": "/Dennipalooza/static/css/main.057b907e.css.map",
+    "main.f981eee7.js.map": "/Dennipalooza/static/js/main.f981eee7.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c2ed65b.css",
-    "static/js/main.79c917cb.js"
+    "static/css/main.057b907e.css",
+    "static/js/main.f981eee7.js"
   ]
 }
