@@ -82,6 +82,12 @@ p{
   animation: loadingFade 900ms ease-out forwards;
 }
 
+.loading-dots {
+  display: inline-block;
+  width: 1.8ch;
+  text-align: left;
+}
+
 .loading-slot {
   margin-top: 14px;
   min-height: 36px;

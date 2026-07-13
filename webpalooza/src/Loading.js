@@ -4,23 +4,29 @@ import './App.css';
 export default function Loading() {
   const { useState, useEffect } = React;
   const loadingPhrases = [
-    'Loading…',
-    'Searching…',
-    'Almost there…',
+    'Loading',
+    'Searching',
+    'Almost there',
   ];
 
   const [showLoadingText, setShowLoadingText] = useState(false);
   const [phraseIndex, setPhraseIndex] = useState(0);
+  const [dotsCount, setDotsCount] = useState(1);
   const [phase, setPhase] = useState('loading'); // 'loading' | 'error' | 'want' | 'final'
 
   useEffect(() => {
     let phraseTimer;
+    let dotsTimer;
 
     const startTimer = setTimeout(() => {
       setShowLoadingText(true);
+      setDotsCount(1);
       phraseTimer = setInterval(() => {
         setPhraseIndex((prev) => (prev + 1) % loadingPhrases.length);
       }, 2600);
+      dotsTimer = setInterval(() => {
+        setDotsCount((prev) => (prev % 3) + 1);
+      }, 380);
     }, 2200);
 
     // Fase 1: Erro (10s depois)
@@ -47,13 +53,19 @@ export default function Loading() {
       if (phraseTimer) {
         clearInterval(phraseTimer);
       }
+      if (dotsTimer) {
+        clearInterval(dotsTimer);
+      }
     };
   }, [loadingPhrases.length]);
 
   return (
     <div className="App-header">
       {showLoadingText && (
-        <p key={phraseIndex} className="loading-text">{loadingPhrases[phraseIndex]}</p>
+        <p key={phraseIndex} className="loading-text">
+          {loadingPhrases[phraseIndex]}
+          <span className="loading-dots">{'.'.repeat(dotsCount)}</span>
+        </p>
       )}
 
       {phase === 'error' && (
