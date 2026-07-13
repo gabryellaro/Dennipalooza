@@ -17,6 +17,7 @@
   font-weight: 800;
   color: transparent;
   -webkit-text-stroke: 1.5px #000000;
+  text-stroke: 1.5px #000000;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -28,7 +29,22 @@
   color: transparent;
   border-radius: 2px;
   -webkit-text-stroke: 1.5px #B8FF2C;
+  text-stroke: 1.5px #B8FF2C;
   transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .wish-list-button {
+    color: #000000;
+    -webkit-text-stroke: 0;
+    text-stroke: 0;
+  }
+
+  .wish-list-button:hover {
+    color: #B8FF2C;
+    -webkit-text-stroke: 0;
+    text-stroke: 0;
+  }
 }
 
 .logo {
