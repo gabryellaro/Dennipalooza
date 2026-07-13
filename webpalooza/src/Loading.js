@@ -29,15 +29,15 @@ export default function Loading() {
       setPhase('error');
     }, 10000);
 
-    // Fase 2: "i just want you" (8s depois)
+    // Fase 2: "i just want you" (3s depois)
     const phase2Timer = setTimeout(() => {
       setPhase('want');
-    }, 18000);
+    }, 13000);
 
     // Fase 3: "See you at DENNIPALOOZA" (8s depois)
     const phase3Timer = setTimeout(() => {
       setPhase('final');
-    }, 26000);
+    }, 21000);
 
     return () => {
       clearTimeout(startTimer);
