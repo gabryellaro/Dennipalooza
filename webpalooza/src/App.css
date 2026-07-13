@@ -116,7 +116,17 @@ p{
   color: #000000;
   margin: 0;
   letter-spacing: 0.15em;
-  animation: shake 700ms ease-in-out infinite;
+}
+
+.error-flash {
+  animation: errorFlicker 120ms steps(1) infinite;
+}
+
+@keyframes errorFlicker {
+  0%   { color: #000000; transform: translate(0, 0); }
+  33%  { color: #ff0000; transform: translate(-2px, 1px); }
+  66%  { color: #000000; transform: translate(2px, -1px); }
+  100% { color: #000000; transform: translate(0, 0); }
 }
 
 .error-title {
