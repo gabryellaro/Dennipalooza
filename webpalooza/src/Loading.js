@@ -51,21 +51,27 @@ export default function Loading() {
       setPhase('error-found');
     }, 12000);
 
-    // Fase 2: "i just want you" (14s)
+    // Fase 2: "i just want you" (14s, 3s de duração)
     const phase2Timer = setTimeout(() => {
       setPhase('want');
     }, 14000);
 
-    // Fase 3: "See you at DENNIPALOOZA" (21s)
+    // Fase 2b: "you. that's it" (17s, 3s de duração)
+    const phase2bTimer = setTimeout(() => {
+      setPhase('want2');
+    }, 17000);
+
+    // Fase 3: "See you at DENNIPALOOZA" (20s)
     const phase3Timer = setTimeout(() => {
       setPhase('final');
-    }, 21000);
+    }, 20000);
 
     return () => {
       clearTimeout(startTimer);
       clearTimeout(phase1Timer);
       clearTimeout(phase1bTimer);
       clearTimeout(phase2Timer);
+      clearTimeout(phase2bTimer);
       clearTimeout(phase3Timer);
       if (phraseTimer) clearInterval(phraseTimer);
       if (dotsTimer) clearInterval(dotsTimer);
@@ -103,6 +109,13 @@ export default function Loading() {
         <div className="error-container">
           <div className="error-message">
             <p className="error-subtitle">i just want you.</p>
+          </div>
+        </div>
+      )}
+
+      {phase === 'want2' && (
+        <div className="error-container">
+          <div className="error-message">
             <p className="error-secondary">you. that's it</p>
           </div>
         </div>
